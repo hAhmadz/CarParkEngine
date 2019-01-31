@@ -32,9 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.outputLbl = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
             this.calculateBtn = new System.Windows.Forms.Button();
-            this.pkgLbl = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ExitTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ExitDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +44,6 @@
             this.EntryTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EntryDatePicker = new System.Windows.Forms.DateTimePicker();
             this.currDateLbl = new System.Windows.Forms.Label();
-            this.costOutput = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -83,16 +82,25 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.costOutput);
+            this.panel1.Controls.Add(this.outputLbl);
             this.panel1.Controls.Add(this.resetBtn);
             this.panel1.Controls.Add(this.calculateBtn);
-            this.panel1.Controls.Add(this.pkgLbl);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(12, 81);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1042, 422);
             this.panel1.TabIndex = 4;
+            // 
+            // outputLbl
+            // 
+            this.outputLbl.AutoSize = true;
+            this.outputLbl.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLbl.Location = new System.Drawing.Point(384, 294);
+            this.outputLbl.Name = "outputLbl";
+            this.outputLbl.Size = new System.Drawing.Size(0, 35);
+            this.outputLbl.TabIndex = 9;
+            this.outputLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // resetBtn
             // 
@@ -106,7 +114,7 @@
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(195, 65);
             this.resetBtn.TabIndex = 8;
-            this.resetBtn.Text = "Reset";
+            this.resetBtn.Text = "Clear";
             this.resetBtn.UseVisualStyleBackColor = false;
             this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
@@ -125,17 +133,6 @@
             this.calculateBtn.Text = "Calculate";
             this.calculateBtn.UseVisualStyleBackColor = false;
             this.calculateBtn.Click += new System.EventHandler(this.calculateBtn_Click);
-            // 
-            // pkgLbl
-            // 
-            this.pkgLbl.AutoSize = true;
-            this.pkgLbl.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pkgLbl.Location = new System.Drawing.Point(413, 347);
-            this.pkgLbl.Name = "pkgLbl";
-            this.pkgLbl.Size = new System.Drawing.Size(194, 35);
-            this.pkgLbl.TabIndex = 5;
-            this.pkgLbl.Text = "Package Label";
-            this.pkgLbl.Visible = false;
             // 
             // groupBox2
             // 
@@ -231,22 +228,10 @@
             // 
             this.currDateLbl.AutoSize = true;
             this.currDateLbl.Font = new System.Drawing.Font("Myriad Hebrew", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currDateLbl.Location = new System.Drawing.Point(834, 506);
+            this.currDateLbl.Location = new System.Drawing.Point(12, 506);
             this.currDateLbl.Name = "currDateLbl";
-            this.currDateLbl.Size = new System.Drawing.Size(140, 20);
+            this.currDateLbl.Size = new System.Drawing.Size(0, 20);
             this.currDateLbl.TabIndex = 5;
-            this.currDateLbl.Text = "Current Date Label";
-            // 
-            // costOutput
-            // 
-            this.costOutput.AutoSize = true;
-            this.costOutput.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costOutput.Location = new System.Drawing.Point(468, 272);
-            this.costOutput.Name = "costOutput";
-            this.costOutput.Size = new System.Drawing.Size(69, 35);
-            this.costOutput.TabIndex = 9;
-            this.costOutput.Text = "Cost";
-            this.costOutput.Visible = false;
             // 
             // Form1
             // 
@@ -257,6 +242,8 @@
             this.Controls.Add(this.currDateLbl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -277,7 +264,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label pkgLbl;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -288,7 +274,7 @@
         private System.Windows.Forms.Label currDateLbl;
         private System.Windows.Forms.Button resetBtn;
         private System.Windows.Forms.Button calculateBtn;
-        private System.Windows.Forms.Label costOutput;
+        private System.Windows.Forms.Label outputLbl;
     }
 }
 

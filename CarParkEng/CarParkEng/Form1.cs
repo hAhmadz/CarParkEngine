@@ -24,6 +24,12 @@ namespace CarParkEng
         public Form1()
         {
             InitializeComponent();
+            InitializeCustoms();
+        }
+
+        void InitializeCustoms()
+        {
+            currDateLbl.Text = DateTime.Now.ToLongDateString();
         }
 
         private bool isEarlyBirdRate(DateTime start, DateTime end)
@@ -115,7 +121,7 @@ namespace CarParkEng
                     outputMsg = $"Hourly Rate: ${isNormalRate(StartDT, EndDT)}";
             }
             else
-                outputMsg = "Entry time must occur before the exit time!";
+                MessageBox.Show("Entry time must occur before the exit time!");
 
             return outputMsg;
         }
@@ -128,14 +134,12 @@ namespace CarParkEng
             var ExitTime = Convert.ToDateTime(ExitTimePicker.Text).TimeOfDay.ToString();
 
             string result = calculateCost(EntryDate,EntryTime,ExitDate,ExitTime);
-            pkgLbl.Visible = true;
-            pkgLbl.Text = result;
+            outputLbl.Text = result;
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
-            pkgLbl.Text = "";
-            costOutput.Text = "";
+            outputLbl.Text = "";
         }
     }
 }
