@@ -1,0 +1,10 @@
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.Form1.resources
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.Properties.Resources.resources
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.csproj.GenerateResource.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.csproj.CoreCompileInputs.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\bin\Debug\CarParkEng.exe.config
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\bin\Debug\CarParkEng.exe
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\bin\Debug\CarParkEng.pdb
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.csprojAssemblyReference.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.exe
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\CarParkEng\obj\Debug\CarParkEng.pdb
