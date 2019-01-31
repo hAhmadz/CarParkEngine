@@ -12,7 +12,12 @@ namespace CarParkEng
 {
     public partial class Form1 : Form
     {
+
         string extractedTime;
+        public const double EarlyBirdRate = 13.00;
+        public const double WeekendRate= 10.00;
+        public const double NightRate = 6.50;
+
 
         public Form1()
         {
@@ -37,10 +42,17 @@ namespace CarParkEng
             bool result = false;
             return result;
         }
-        private bool isNightRate()
+        private bool isNightRate(DateTime start, DateTime end)
         {
-            bool result = false;
-            return result;
+            DateTime entryStartRange = new DateTime(start.Year, start.Month, start.Day, 18, 0, 0);
+            DateTime entryEndRange = new DateTime(start.Year, start.Month, start.Day, 23, 59, 59);
+            DateTime exitRange = new DateTime(end.Year, end.Month, end.Day, 6, 0, 0);
+            string startDayName = start.DayOfWeek.ToString();
+            if (!(startDayName.Equals("Sunday") || startDayName.Equals("Saturday")))
+                if (start.TimeOfDay >= entryStartRange.TimeOfDay && start.TimeOfDay <= entryEndRange.TimeOfDay)
+                    if (end.TimeOfDay <= exitRange.TimeOfDay)
+                        return true;
+            return false;
         }
 
 
@@ -52,22 +64,14 @@ namespace CarParkEng
             if (EndDT > StartDT)
             {
                 //Checking packages
-
                 if (entryDate.Equals(exitDate))
                 {
-                    bool isEarlyBird = isEarlyBirdRate(StartDT,EndDT);
+                    if (isEarlyBirdRate(StartDT, EndDT))
+                        outputMsg = $"Early Bird Rates: ${EarlyBirdRate.ToString()} ";
+                }    
+                else if (isNightRate(StartDT, EndDT))
+                    outputMsg = $"Night Rates: ${NightRate.ToString()} ";
 
-                    /*
-                    if ()           //Early Bird
-                    {
-
-                    }
-                    else if ()      //Night Rate
-                    {
-
-                    }
-                    */
-                }
                 /*
                 else if ()      //Weekend Rate
                 {
@@ -77,9 +81,7 @@ namespace CarParkEng
 
             }
             else
-            {
                 outputMsg = "Entry time must occur before the exit time!";
-            }
 
             return outputMsg;
         }
@@ -92,10 +94,9 @@ namespace CarParkEng
             var ExitTime = Convert.ToDateTime(ExitTimePicker.Text).TimeOfDay.ToString();
 
             string result = calculateCost(EntryDate,EntryTime,ExitDate,ExitTime);
-
-
-            System.Diagnostics.Debug.WriteLine(EntryDate);
-            System.Diagnostics.Debug.WriteLine(EntryTime);
+            pkgLbl.Visible = true;
+            pkgLbl.Text = result;
+            //pkgLbl.Text = result;
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
