@@ -13,25 +13,28 @@ using System.Windows.Forms;
 
 namespace CarParkEng
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         //**Constant Variables**
-        public const double EarlyBirdRate = 13.00;
-        public const double WeekendRate= 10.00;
-        public const double NightRate = 6.50;
-        public const double NormalRate = 5.00;
+        private const double EarlyBirdRate = 13.00;
+        private const double WeekendRate= 10.00;
+        private const double NightRate = 6.50;
+        private const double NormalRate = 5.00;
 
-        public Form1()
+        #region Constructors
+        public MainForm()
         {
             InitializeComponent();
             InitializeCustoms();
         }
-
         void InitializeCustoms()
         {
             currDateLbl.Text = DateTime.Now.ToLongDateString();
         }
 
+        #endregion
+
+        #region Methods
         private bool isEarlyBirdRate(DateTime start, DateTime end)
         {
             decimal dayDiff = Convert.ToDecimal(end.Subtract(start).TotalDays);
@@ -109,8 +112,6 @@ namespace CarParkEng
             DateTime EndDT = DateTime.Parse(String.Format("{0} {1}", exitDate, exitTime));
             if (EndDT > StartDT)
             {
-
-                //Checking packages
                 if (isWeekendRate(StartDT, EndDT))
                     outputMsg = $"Weekend Rates: ${WeekendRate.ToString()} ";
                 else if (isEarlyBirdRate(StartDT, EndDT))
@@ -126,13 +127,15 @@ namespace CarParkEng
             return outputMsg;
         }
 
+        #endregion
+
+        #region Click Events
         private void calculateBtn_Click(object sender, EventArgs e)
         {
             var EntryDate = Convert.ToDateTime(EntryDatePicker.Text).ToShortDateString();
             var EntryTime = Convert.ToDateTime(EntryTimePicker.Text).TimeOfDay.ToString();
             var ExitDate = Convert.ToDateTime(ExitDatePicker.Text).ToShortDateString();
             var ExitTime = Convert.ToDateTime(ExitTimePicker.Text).TimeOfDay.ToString();
-
             string result = calculateCost(EntryDate,EntryTime,ExitDate,ExitTime);
             outputLbl.Text = result;
         }
@@ -141,5 +144,6 @@ namespace CarParkEng
         {
             outputLbl.Text = "";
         }
+        #endregion
     }
 }

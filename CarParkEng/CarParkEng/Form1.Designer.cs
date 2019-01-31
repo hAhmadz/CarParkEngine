@@ -1,6 +1,6 @@
 ﻿namespace CarParkEng
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -106,13 +106,13 @@
             // 
             this.resetBtn.BackColor = System.Drawing.Color.SeaShell;
             this.resetBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.Salmon;
+            this.resetBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetBtn.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resetBtn.ForeColor = System.Drawing.Color.Navy;
             this.resetBtn.Location = new System.Drawing.Point(509, 173);
             this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(195, 65);
+            this.resetBtn.Size = new System.Drawing.Size(220, 78);
             this.resetBtn.TabIndex = 8;
             this.resetBtn.Text = "Clear";
             this.resetBtn.UseVisualStyleBackColor = false;
@@ -120,15 +120,15 @@
             // 
             // calculateBtn
             // 
-            this.calculateBtn.BackColor = System.Drawing.Color.SeaShell;
+            this.calculateBtn.BackColor = System.Drawing.Color.Honeydew;
             this.calculateBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.calculateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Salmon;
+            this.calculateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
             this.calculateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calculateBtn.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateBtn.Font = new System.Drawing.Font("Myriad Hebrew", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateBtn.ForeColor = System.Drawing.Color.Navy;
-            this.calculateBtn.Location = new System.Drawing.Point(318, 173);
+            this.calculateBtn.Location = new System.Drawing.Point(283, 173);
             this.calculateBtn.Name = "calculateBtn";
-            this.calculateBtn.Size = new System.Drawing.Size(185, 65);
+            this.calculateBtn.Size = new System.Drawing.Size(220, 78);
             this.calculateBtn.TabIndex = 7;
             this.calculateBtn.Text = "Calculate";
             this.calculateBtn.UseVisualStyleBackColor = false;
@@ -150,22 +150,24 @@
             // ExitTimePicker
             // 
             this.ExitTimePicker.CustomFormat = "";
+            this.ExitTimePicker.Font = new System.Drawing.Font("Myriad Hebrew", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.ExitTimePicker.Location = new System.Drawing.Point(179, 91);
             this.ExitTimePicker.Name = "ExitTimePicker";
             this.ExitTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ExitTimePicker.ShowUpDown = true;
-            this.ExitTimePicker.Size = new System.Drawing.Size(273, 26);
+            this.ExitTimePicker.Size = new System.Drawing.Size(273, 34);
             this.ExitTimePicker.TabIndex = 7;
             this.ExitTimePicker.Value = new System.DateTime(2019, 1, 31, 21, 0, 0, 0);
             // 
             // ExitDatePicker
             // 
             this.ExitDatePicker.CustomFormat = "";
+            this.ExitDatePicker.Font = new System.Drawing.Font("Myriad Hebrew", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ExitDatePicker.Location = new System.Drawing.Point(179, 38);
             this.ExitDatePicker.Name = "ExitDatePicker";
-            this.ExitDatePicker.Size = new System.Drawing.Size(273, 26);
+            this.ExitDatePicker.Size = new System.Drawing.Size(273, 34);
             this.ExitDatePicker.TabIndex = 6;
             this.ExitDatePicker.Value = new System.DateTime(2019, 1, 31, 21, 0, 0, 0);
             // 
@@ -205,35 +207,38 @@
             // EntryTimePicker
             // 
             this.EntryTimePicker.CustomFormat = "";
+            this.EntryTimePicker.Font = new System.Drawing.Font("Myriad Hebrew", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EntryTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.EntryTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EntryTimePicker.Location = new System.Drawing.Point(191, 91);
             this.EntryTimePicker.Name = "EntryTimePicker";
             this.EntryTimePicker.ShowUpDown = true;
-            this.EntryTimePicker.Size = new System.Drawing.Size(273, 26);
+            this.EntryTimePicker.Size = new System.Drawing.Size(273, 34);
             this.EntryTimePicker.TabIndex = 5;
             this.EntryTimePicker.Value = new System.DateTime(2019, 1, 31, 21, 0, 0, 0);
             // 
             // EntryDatePicker
             // 
+            this.EntryDatePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EntryDatePicker.CustomFormat = "";
+            this.EntryDatePicker.Font = new System.Drawing.Font("Myriad Hebrew", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EntryDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.EntryDatePicker.Location = new System.Drawing.Point(191, 38);
             this.EntryDatePicker.Name = "EntryDatePicker";
-            this.EntryDatePicker.Size = new System.Drawing.Size(273, 26);
+            this.EntryDatePicker.Size = new System.Drawing.Size(273, 34);
             this.EntryDatePicker.TabIndex = 4;
             this.EntryDatePicker.Value = new System.DateTime(2019, 1, 31, 21, 0, 0, 0);
             // 
             // currDateLbl
             // 
             this.currDateLbl.AutoSize = true;
-            this.currDateLbl.Font = new System.Drawing.Font("Myriad Hebrew", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currDateLbl.Font = new System.Drawing.Font("Myriad Hebrew", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currDateLbl.Location = new System.Drawing.Point(12, 506);
             this.currDateLbl.Name = "currDateLbl";
-            this.currDateLbl.Size = new System.Drawing.Size(0, 20);
+            this.currDateLbl.Size = new System.Drawing.Size(0, 24);
             this.currDateLbl.TabIndex = 5;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,8 +249,8 @@
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "TallyIT Car Park";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
