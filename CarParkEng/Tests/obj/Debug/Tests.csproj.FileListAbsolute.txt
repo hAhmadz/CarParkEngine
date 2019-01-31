@@ -1,0 +1,17 @@
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Tests.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Tests.pdb
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\CarParkEng.exe
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\CarParkEng.pdb
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\CarParkEng.exe.config
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\obj\Debug\Tests.csprojAssemblyReference.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\obj\Debug\Tests.csproj.CopyComplete
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\obj\Debug\Tests.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\Tests\obj\Debug\Tests.pdb

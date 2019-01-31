@@ -63,7 +63,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Myriad Hebrew", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(690, 9);
+            this.label3.Location = new System.Drawing.Point(23, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(364, 69);
             this.label3.TabIndex = 2;
@@ -87,9 +87,9 @@
             this.panel1.Controls.Add(this.calculateBtn);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 81);
+            this.panel1.Location = new System.Drawing.Point(35, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 422);
+            this.panel1.Size = new System.Drawing.Size(1002, 422);
             this.panel1.TabIndex = 4;
             // 
             // outputLbl
@@ -142,7 +142,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(509, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(494, 134);
+            this.groupBox2.Size = new System.Drawing.Size(473, 134);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Exit";
@@ -228,6 +228,7 @@
             this.EntryDatePicker.Size = new System.Drawing.Size(273, 34);
             this.EntryDatePicker.TabIndex = 4;
             this.EntryDatePicker.Value = new System.DateTime(2019, 1, 31, 21, 0, 0, 0);
+            this.EntryDatePicker.ValueChanged += new System.EventHandler(this.EntryDatePicker_ValueChanged);
             // 
             // currDateLbl
             // 
