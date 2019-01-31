@@ -1,23 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+//************************************
+/*
+ *  Project: CarPark Project for TallyIT 
+ *  Version 1.0
+ *  Haaris Ahmad
+ *  Date: 01/02/2019
+
+ */
+//************************************
 
 namespace CarParkEng
 {
     public partial class Form1 : Form
     {
-
-        string extractedTime;
+        //**Constant Variables**
         public const double EarlyBirdRate = 13.00;
         public const double WeekendRate= 10.00;
         public const double NightRate = 6.50;
-
+        public const double NormalRate = 5.00;
 
         public Form1()
         {
@@ -26,14 +28,19 @@ namespace CarParkEng
 
         private bool isEarlyBirdRate(DateTime start, DateTime end)
         {
-            DateTime entryStartRange = new DateTime(start.Year,start.Month,start.Day,6,0,0);
-            DateTime entryEndRange = new DateTime(start.Year, start.Month, start.Day, 9, 0, 0);
-            DateTime exitStartRange = new DateTime(end.Year, end.Month, end.Day, 15, 30, 0);
-            DateTime exitEndRange = new DateTime(end.Year, end.Month, end.Day, 23, 30, 0);
+            decimal dayDiff = Convert.ToDecimal(end.Subtract(start).TotalDays);
+            dayDiff = Math.Floor(dayDiff);
+            if (dayDiff < 1)
+            {
+                DateTime entryStartRange = new DateTime(start.Year, start.Month, start.Day, 6, 0, 0);
+                DateTime entryEndRange = new DateTime(start.Year, start.Month, start.Day, 9, 0, 0);
+                DateTime exitStartRange = new DateTime(end.Year, end.Month, end.Day, 15, 30, 0);
+                DateTime exitEndRange = new DateTime(end.Year, end.Month, end.Day, 23, 30, 0);
 
-            if (start.TimeOfDay >= entryStartRange.TimeOfDay && start.TimeOfDay <= entryEndRange.TimeOfDay)
-                if(end.TimeOfDay >= exitStartRange.TimeOfDay && end.TimeOfDay <= exitEndRange.TimeOfDay)
-                    return true;
+                if (start.TimeOfDay >= entryStartRange.TimeOfDay && start.TimeOfDay <= entryEndRange.TimeOfDay)
+                    if (end.TimeOfDay >= exitStartRange.TimeOfDay && end.TimeOfDay <= exitEndRange.TimeOfDay)
+                        return true;
+            } 
 
             return false;
         }
@@ -65,6 +72,29 @@ namespace CarParkEng
             return false;
         }
 
+        private string isNormalRate(DateTime start, DateTime end)
+        {
+            double output = 0.0;
+            decimal timeDiff = Convert.ToDecimal(end.Subtract(start).TotalHours);
+            timeDiff = Math.Ceiling(timeDiff);
+            switch (timeDiff)
+            {
+                case 1:
+                    output = NormalRate;
+                    break;
+                case 2:
+                    output = NormalRate * 2;
+                    break;
+                case 3:
+                    output = NormalRate * 3;
+                    break;
+                default:
+                    double daydiff = Convert.ToDouble(Math.Ceiling(Convert.ToDecimal(end.Subtract(start).TotalDays)));
+                    output = NormalRate * 4 * daydiff;
+                    break;
+            }
+            return output.ToString();
+        }
 
         private string calculateCost(string entryDate,string entryTime,string exitDate, string exitTime)
         {
@@ -82,9 +112,7 @@ namespace CarParkEng
                 else if (isNightRate(StartDT, EndDT))
                     outputMsg = $"Night Rates: ${NightRate.ToString()} ";
                 else
-                {
-                    outputMsg = "Normal Rates Pending";
-                }
+                    outputMsg = $"Hourly Rate: ${isNormalRate(StartDT, EndDT)}";
             }
             else
                 outputMsg = "Entry time must occur before the exit time!";
