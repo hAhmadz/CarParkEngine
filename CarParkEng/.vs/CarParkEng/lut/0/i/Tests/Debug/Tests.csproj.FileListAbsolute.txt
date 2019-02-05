@@ -1,0 +1,8 @@
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\b\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\b\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\b\Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\b\Tests\bin\Debug\Tests.dll
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\i\Tests\Debug\Tests.csprojAssemblyReference.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\i\Tests\Debug\Tests.csproj.CoreCompileInputs.cache
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\i\Tests\Debug\Tests.csproj.CopyComplete
+F:\Programming\Github\TallyIT\CarParkEngine\CarParkEng\.vs\CarParkEng\lut\0\i\Tests\Debug\Tests.dll

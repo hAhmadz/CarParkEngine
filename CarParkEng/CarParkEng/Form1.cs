@@ -7,7 +7,6 @@ using System.Windows.Forms;
  *  Version 1.0
  *  Haaris Ahmad
  *  Date: 01/02/2019
-
  */
 //************************************
 
@@ -34,11 +33,11 @@ namespace CarParkEng
             EntryDatePicker.MaxDate = DateTime.Now;
             ExitDatePicker.MaxDate = DateTime.Now;
             ExitDatePicker.Value = DateTime.Now;
-
         }
         
         private void calculateBtn_Click(object sender, EventArgs e)
         {
+            DateTime currTime = DateTime.Now;
             var EntryDate = Convert.ToDateTime(EntryDatePicker.Text).ToShortDateString();
             var EntryTime = Convert.ToDateTime(EntryTimePicker.Text).TimeOfDay.ToString();
             var ExitDate = Convert.ToDateTime(ExitDatePicker.Text).ToShortDateString();

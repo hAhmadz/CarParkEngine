@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CarParkEng
 {
     public class Carpark
@@ -12,11 +7,39 @@ namespace CarParkEng
         private const double WeekendRate = 10.00;
         private const double NightRate = 6.50;
         private const double NormalRate = 5.00;
-
         public Carpark()
-        {
+        {}
 
+        /*
+         * Main Entry point function to calculate parking rates. Returns the output rate 
+         * message 
+         */
+        public string CalculateCost(string entryDate, string entryTime, string exitDate, string exitTime)
+        {
+            string outputMsg = "";
+            DateTime currTime = DateTime.Now;
+            DateTime StartDT = DateTime.Parse(String.Format("{0} {1}", entryDate, entryTime));
+            DateTime EndDT = DateTime.Parse(String.Format("{0} {1}", exitDate, exitTime));
+            if (EndDT > StartDT && StartDT < currTime && EndDT < currTime)
+            {
+                if (IsWeekendRate(StartDT, EndDT))
+                    outputMsg = $"Weekend Rates: ${WeekendRate.ToString()} ";
+                else if (IsEarlyBirdRate(StartDT, EndDT))
+                    outputMsg = $"Early Bird Rates: ${EarlyBirdRate.ToString()} ";
+                else if (IsNightRate(StartDT, EndDT))
+                    outputMsg = $"Night Rates: ${NightRate.ToString()} ";
+                else
+                    outputMsg = $"Hourly Rate: ${IsNormalRate(StartDT, EndDT)}";
+            }
+            else
+                outputMsg = "Incorrect time entrered.";
+
+            return outputMsg;
         }
+
+        /*
+         * Returns true if input fulfils the Early Bird rate conditions, else false 
+         */
         private bool IsEarlyBirdRate(DateTime start, DateTime end)
         {
             decimal dayDiff = Convert.ToDecimal(end.Subtract(start).TotalDays);
@@ -35,6 +58,10 @@ namespace CarParkEng
 
             return false;
         }
+        
+        /*
+         * Returns true if input fulfils the weekend rate conditions, else false 
+         */
         private bool IsWeekendRate(DateTime start, DateTime end)
         {
             string startDayName = start.DayOfWeek.ToString();
@@ -46,6 +73,10 @@ namespace CarParkEng
 
             return false;
         }
+
+        /*
+         * Returns true if input fulfils the night rate conditions, else false 
+         */
         private bool IsNightRate(DateTime start, DateTime end)
         {
             DateTime entryStartRange = new DateTime(start.Year, start.Month, start.Day, 18, 0, 0);
@@ -63,6 +94,9 @@ namespace CarParkEng
             return false;
         }
 
+        /*
+         * Returns the normal rate value if input fulfils no other rate conditions
+         */
         private string IsNormalRate(DateTime start, DateTime end)
         {
             double output = 0.0;
@@ -84,30 +118,8 @@ namespace CarParkEng
                     output = NormalRate * 4 * daydiff;
                     break;
             }
+
             return output.ToString();
         }
-
-        public string CalculateCost(string entryDate, string entryTime, string exitDate, string exitTime)
-        {
-            string outputMsg = "";
-            DateTime StartDT = DateTime.Parse(String.Format("{0} {1}", entryDate, entryTime));
-            DateTime EndDT = DateTime.Parse(String.Format("{0} {1}", exitDate, exitTime));
-            if (EndDT > StartDT)
-            {
-                if (IsWeekendRate(StartDT, EndDT))
-                    outputMsg = $"Weekend Rates: ${WeekendRate.ToString()} ";
-                else if (IsEarlyBirdRate(StartDT, EndDT))
-                    outputMsg = $"Early Bird Rates: ${EarlyBirdRate.ToString()} ";
-                else if (IsNightRate(StartDT, EndDT))
-                    outputMsg = $"Night Rates: ${NightRate.ToString()} ";
-                else
-                    outputMsg = $"Hourly Rate: ${IsNormalRate(StartDT, EndDT)}";
-            }
-            else
-                outputMsg = "Time not in format!";
-
-            return outputMsg;
-        }
-
     }
 }
